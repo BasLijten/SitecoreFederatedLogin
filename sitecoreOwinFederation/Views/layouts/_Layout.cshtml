@@ -1,0 +1,18 @@
+﻿@using Sitecore.Mvc
+
+<html>
+<body>
+    <p>Today's date is @DateTime.Today.ToShortDateString()</p>
+    @Html.Sitecore().Placeholder("maincontent")
+</body>
+</html>
+@*<!DOCTYPE html>
+<html>
+    <head>
+        <title>@Page.Title</title>
+        @RenderSection("head", required: false)
+    </head>
+    <body>
+        @RenderBody()
+    </body>
+</html>*@

@@ -1,0 +1,8 @@
+artificats/
+.vs/
+packages/
+sitecoreBinaries/
+sitecoreOwinFederation/bin/
+sitecoreOwinFederation/obj/
+sitecoreOwinFederation/Properties/PublishProfiles/
+

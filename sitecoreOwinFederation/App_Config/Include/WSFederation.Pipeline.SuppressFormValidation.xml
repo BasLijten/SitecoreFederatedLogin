@@ -1,0 +1,9 @@
+﻿<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+  <sitecore>
+    <pipelines>
+      <preprocessRequest>
+        <processor patch:instead="*[@type='Sitecore.Pipelines.PreprocessRequest.SuppressFormValidation, Sitecore.Kernel']" type="SitecoreOwinFederator.pipelines.PreprocessRequest.SuppressAdfsFormValidation, sitecoreOwinFederation" />
+      </preprocessRequest>
+    </pipelines>
+  </sitecore>
+</configuration>
