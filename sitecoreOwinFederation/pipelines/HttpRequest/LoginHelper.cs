@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Security.Principal;
 using System.Web;
 using Sitecore;
+using Sitecore.Analytics;
 using Sitecore.Configuration;
 using Sitecore.Diagnostics;
 using Sitecore.Security.Accounts;
@@ -67,7 +68,11 @@ namespace SitecoreOwinFederator.Pipelines.HttpRequest
                     if (virtualUser.RuntimeSettings.IsAdministrator)
                         allowLoginToShell = true;
                 }
+                virtualUser.Profile.Email = "aap@app.com";
                 AuthenticationManager.Login(virtualUser);
+                var tracker = Tracker.Current;
+                if (tracker != null)
+                    tracker.Session.Identify(virtualUser.Identity.Name);
             }
             catch (ArgumentException ex)
             {

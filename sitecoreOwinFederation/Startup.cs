@@ -96,6 +96,19 @@ namespace SitecoreOwinFederator
                     Wtrealm = "urn:multisite3:local",                    
                 });
             });
+
+            //configure Antariksh ADFS middleware
+            //app.Map("/sitecore modules/shell/federation", config => {
+                
+            //    config.UseWsFederationAuthentication(new WsFederationAuthenticationOptions
+            //    {
+            //        UseTokenLifetime = true,
+            //        MetadataAddress = "http://claimsprovider.local/FederationMetadata",
+            //        Wtrealm = "urn:medewerker",
+            //        Wreply = "http://multisite.local/sitecore/shell",
+            //    });
+            //});
+
         }
 
         private void HandleException(CookieExceptionContext exception)

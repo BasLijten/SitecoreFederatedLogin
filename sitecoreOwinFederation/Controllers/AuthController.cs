@@ -14,6 +14,7 @@ using Microsoft.Owin.Security.DataHandler;
 using Microsoft.Owin.Security.Infrastructure;
 using Microsoft.Owin.Security.WsFederation;
 using Sitecore;
+using Sitecore.Analytics;
 using Sitecore.Configuration;
 using Sitecore.Security.Authentication;
 using SitecoreOwinFederator.Authenticator;
@@ -36,11 +37,13 @@ namespace SitecoreOwinFederator.Controllers
             // but a reference to the identity in the Session Store                          
             var principal = IdentityHelper.GetCurrentClaimsPrincipal();
 
+            var ctx = Tracker.Current.Context;
             // Login the sitecore user with the claims identity that was provided by identity ticket
             LoginHelper loginHelper = new LoginHelper();
-            loginHelper.Login(principal);            
-            
-            
+            loginHelper.Login(principal);
+
+            ctx = Tracker.Current.Context;
+
             // temporary code to show user claims, while there is a sitecore user object as
             UserClaimsModel ucm = new UserClaimsModel();
             ucm.Claims = ((ClaimsPrincipal)principal).Claims;

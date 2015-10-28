@@ -6,6 +6,13 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreOwinFederator", "sitecoreOwinFederation\SitecoreOwinFederator.csproj", "{F6529771-8540-43AD-B415-57196DC3E5A0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sitecorebinaries", "sitecorebinaries", "{C3C19EFF-CFD0-4403-80FE-F6FBDD0542BA}"
+	ProjectSection(SolutionItems) = preProject
+		sitecoreBinaries\Sitecore.Analytics.Core.dll = sitecoreBinaries\Sitecore.Analytics.Core.dll
+		sitecoreBinaries\Sitecore.Analytics.dll = sitecoreBinaries\Sitecore.Analytics.dll
+		sitecoreBinaries\Sitecore.Analytics.Model.dll = sitecoreBinaries\Sitecore.Analytics.Model.dll
+		sitecoreBinaries\Sitecore.Kernel.dll = sitecoreBinaries\Sitecore.Kernel.dll
+		sitecoreBinaries\Sitecore.Mvc.dll = sitecoreBinaries\Sitecore.Mvc.dll
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7402B0E3-476F-424C-A10B-22C93DF2C33E}"
 	ProjectSection(SolutionItems) = preProject

@@ -1,9 +1,11 @@
 ﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
 
 <html>
+@Html.Sitecore().VisitorIdentification()
 <body>
-    <p>Today's date is @DateTime.Today.ToShortDateString()</p>
-    @Html.Sitecore().Placeholder("maincontent")
+        <p>Today's date is @DateTime.Today.ToShortDateString()</p>
+        @Html.Sitecore().Placeholder("maincontent")
 </body>
 </html>
 @*<!DOCTYPE html>

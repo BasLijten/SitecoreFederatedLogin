@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Sitecore.Analytics;
 
 namespace SitecoreOwinFederator.Controllers
 {
@@ -11,6 +12,7 @@ namespace SitecoreOwinFederator.Controllers
         // GET: HelloWorld
         public ActionResult Index()
         {
+            var ctx = Tracker.Current.Context;            
             return View();
         }
     }
