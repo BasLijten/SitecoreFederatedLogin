@@ -167,10 +167,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\WSFederation.Pipeline.SuppressFormValidation.xml">
+    <None Include="App_Config\Include\WSFederation.Pipeline.SuppressFormValidation.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="App_Config\Include\WSFederation.Pipeline.UserResolver.xml" />
+    </None>
+    <None Include="App_Config\Include\WSFederation.Pipeline.UserResolver.config" />
     <Content Include="packages.config" />
     <Content Include="sitecore modules\shell\federation\login.aspx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
