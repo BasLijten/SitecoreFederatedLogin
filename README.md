@@ -3,7 +3,10 @@ solution.
 
 to install:
 
-* add the following node to your connectionstrings.config:  <add name="AuthSessionStoreContext" providerName="System.Data.SqlClient" connectionString="Data Source=.\;Initial Catalog=WSFedTokens;Integrated Security=False;User ID=sa;Password=xxxxx;"/>
+* add the following node to your connectionstrings.config:  
+```
+<add name="AuthSessionStoreContext" providerName="System.Data.SqlClient" connectionString="Data Source=.\;Initial Catalog=WSFedTokens;Integrated Security=False;User ID=sa;Password=xxxxx;"/>
+```
 * it creates a new database when it's needed, login tokens will be stored in this database
 * Create a controller rendering "Login" - Controller: "Auth" - Controller Action: "Index"
 * Create a controller rendering "Logout" - Controller: "Auth" - Controller Action: "Logout"
