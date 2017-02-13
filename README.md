@@ -24,4 +24,7 @@ to install:
   * **MetadataAddress**: This is where your login metadata resides in your STS provider.
   * **Wtrealm**: This is your domain that will be accepting users and will be requesting tokens
   * **Wreply**: This is the full URL to the login page you created in your site.
+* Update Sitecore references to match to your current version of Sitecore
+  * Note that references to Tracker.Current.Context do not compile in 8.2 (and some other versions of Sitecore 8). These should be updated to Sitecore.Context.Session to allow the project to compile.
+* Deploy the files and compiled code to your website.
 * If there are any questions: please feel free to contact me.
