@@ -12,7 +12,7 @@ namespace SitecoreOwinFederator.Controllers
         // GET: HelloWorld
         public ActionResult Index()
         {
-            var ctx = Tracker.Current.Context;            
+            var ctx = Tracker.Current.Session;            
             return View();
         }
     }

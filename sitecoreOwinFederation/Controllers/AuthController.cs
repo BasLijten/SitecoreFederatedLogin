@@ -37,12 +37,12 @@ namespace SitecoreOwinFederator.Controllers
             // but a reference to the identity in the Session Store                          
             var principal = IdentityHelper.GetCurrentClaimsPrincipal();
 
-            var ctx = Tracker.Current.Context;
+            var ctx = Tracker.Current.Session;
             // Login the sitecore user with the claims identity that was provided by identity ticket
             LoginHelper loginHelper = new LoginHelper();
             loginHelper.Login(principal);
 
-            ctx = Tracker.Current.Context;
+            ctx = Tracker.Current.Session;
 
             // temporary code to show user claims, while there is a sitecore user object as
             UserClaimsModel ucm = new UserClaimsModel();
