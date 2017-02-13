@@ -21,4 +21,7 @@ to install:
 * Create a page in the root of your site called "Logout" and place the Logout rendering on this page. 
   * Ensure you specify a valid placeholder. For example, if using the default Sitecore sample layout, use the placeholder 'main'
 * Modify your startup.cs to include your own hostnames. If there is just one site, the pipeline branching is not needed
+  * **MetadataAddress**: This is where your login metadata resides in your STS provider.
+  * **Wtrealm**: This is your domain that will be accepting users and will be requesting tokens
+  * **Wreply**: This is the full URL to the login page you created in your site.
 * If there are any questions: please feel free to contact me.
